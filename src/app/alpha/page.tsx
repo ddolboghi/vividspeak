@@ -5,8 +5,8 @@ import RegisterForm from "@/src/components/RegisterForm";
 
 const Page: React.FC = () => {
   return (
-    <main>
-      <header className="p-3 flex justify-center">
+    <div className="min-h-screen flex flex-col">
+      <header className="sticky top-0 p-3 flex justify-center bg-white z-10">
         <Image
           src={vividLogo}
           width={480}
@@ -15,9 +15,11 @@ const Page: React.FC = () => {
           priority
         />
       </header>
-      <Introduce />
-      <RegisterForm />
-    </main>
+      <main className="flex-grow flex flex-col">
+        <Introduce />
+        <RegisterForm />
+      </main>
+    </div>
   );
 };
 
