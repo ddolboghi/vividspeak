@@ -7,7 +7,13 @@ const Page: React.FC = () => {
   return (
     <main>
       <header className="p-3 flex justify-center">
-        <Image src={vividLogo} width={480} height={120} alt="vivid logo" />
+        <Image
+          src={vividLogo}
+          width={480}
+          height={120}
+          alt="vivid logo"
+          priority
+        />
       </header>
       <Introduce />
       <RegisterForm />
