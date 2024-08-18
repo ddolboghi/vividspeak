@@ -1,8 +1,3 @@
 export default function Introduce() {
-  return (
-    <div>
-      When you arrive at the airport, we will deliver your luggage directly to
-      your hotel. Enjoy a comfortable trip with us!
-    </div>
-  );
+  return <div className="m-2">이제 자신있게 영어로 말하세요!</div>;
 }
