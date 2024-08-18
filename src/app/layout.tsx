@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "VIVID SPEACH",
   description: "NEW",
+  icons: {
+    icon: "/vividone.svg",
+  },
 };
 
 export default function RootLayout({
