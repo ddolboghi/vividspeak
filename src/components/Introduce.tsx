@@ -35,34 +35,37 @@ export default function Introduce() {
       </section>
       <hr className="py-2" />
       <div className="relative">
-        <Image
-          src={teacherImage}
-          layout="fill"
-          objectFit="cover"
-          alt="강사 이미지"
-          priority
-        />
-        <div className="absolute inset-0 bg-white opacity-75"></div>
-        <div className="absolute bottom-1 right-2 text-black text-xs opacity-70 z-20">
-          *실제 외국인들 대상 강연 사진입니다.
+        <div className="relative w-full h-auto">
+          <Image
+            src={teacherImage}
+            layout="intrinsic"
+            objectFit="contain"
+            alt="강사 이미지"
+            priority
+            className="w-full h-auto object-contains"
+          />
+          <div className="absolute inset-0 bg-white opacity-80 h-full"></div>
+          <span className="absolute bottom-1 right-2 text-black text-xs opacity-70 z-9">
+            *실제 외국인들 대상 강연 사진입니다.
+          </span>
+          <section className="absolute inset-0 z-9 flex flex-col justify-center items-center px-6">
+            <h1 className="text-3xl font-bold py-4">강사소개</h1>
+            <div className="py-5">
+              <h2 className="text-xl font-bold">군대 통역병 출신</h2>
+              <p>다양한 국제 행사와 미군 통역 업무로 실전 회화에 능통</p>
+            </div>
+            <div className="py-5">
+              <h2 className="text-xl font-bold">시험 준비 전문성</h2>
+              <p>OPIC 등급 달성을 돕는 체계적인 준비와 고득점 전략 제공</p>
+            </div>
+            <div className="py-5">
+              <h2 className="text-xl font-bold">독학 성공 사례</h2>
+              <p>
+                국내에서 <b>독학</b>으로 영어회화 마스터
+              </p>
+            </div>
+          </section>
         </div>
-        <section className="relative z-9 px-6">
-          <h1 className="text-3xl font-bold">강사소개</h1>
-          <div className="py-5">
-            <h2 className="text-xl font-bold">군대 통역병 출신</h2>
-            <p>다양한 국제 행사와 미군 통역 업무로 실전 회화에 능통</p>
-          </div>
-          <div className="py-5">
-            <h2 className="text-xl font-bold">시험 준비 전문성</h2>
-            <p>OPIC 등급 달성을 돕는 체계적인 준비와 고득점 전략 제공</p>
-          </div>
-          <div className="py-5">
-            <h2 className="text-xl font-bold">독학 성공 사례</h2>
-            <p>
-              국내에서 <b>독학</b>으로 영어회화 마스터
-            </p>
-          </div>
-        </section>
       </div>
       <hr className="py-2" />
       <section className="px-6">
@@ -87,7 +90,7 @@ export default function Introduce() {
       </section>
       <hr className="py-2" />
       <section className="px-6">
-        <h1 className="text-3xl font-bold">문의 및 등록</h1>
+        <h1 className="text-3xl font-bold">상담 신청하기</h1>
         <div className="pt-5">
           <p>관심 있으신 분들은 아래 신청폼을 통해 신청해 주세요!</p>
         </div>
