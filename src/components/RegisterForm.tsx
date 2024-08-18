@@ -1,9 +1,9 @@
 "use client";
 
-import { postRegisterToSupabase } from "@/services/postRegisterToSupabase";
 import { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { postRegisterToSupabase } from "../services/postRegisterToSupabase";
 
 export default function RegisterForm() {
   const [name, setName] = useState<string>("");
@@ -43,9 +43,9 @@ export default function RegisterForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center justify-center min-h-screen p-4 gap-2"
+      className="flex flex-col items-center justify-center p-4 gap-2"
     >
-      <section className="flex flex-col w-full max-w-md space-y-4">
+      <section className="flex flex-col w-full max-w-md space-y-2">
         <Input
           id="name"
           type="text"
