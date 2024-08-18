@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VIVID SPEACH",
-  description: "NEW",
+  title: "VIVID SPEAK",
+  description: "1대1 영어 회화 과외",
   icons: {
     icon: "/vividone.svg",
   },
