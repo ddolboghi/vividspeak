@@ -4,10 +4,13 @@ import { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { postRegisterToSupabase } from "../services/postRegisterToSupabase";
+import { RocketIcon } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 
 export default function RegisterForm() {
   const [name, setName] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,6 +21,11 @@ export default function RegisterForm() {
     } else {
       setName("");
       setPhoneNumber("");
+      setShowAlert(true);
+
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 2500);
     }
   };
 
@@ -41,11 +49,11 @@ export default function RegisterForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col items-center justify-center p-4 gap-2"
-    >
-      <section className="flex flex-col w-full max-w-md space-y-2">
+    <div className="flex-shrink-0 px-4">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center p-4 gap-2 max-w-md mx-auto"
+      >
         <Input
           id="name"
           type="text"
@@ -64,8 +72,23 @@ export default function RegisterForm() {
           maxLength={13}
           required
         />
-      </section>
-      <Button type="submit">신청하기</Button>
-    </form>
+        <Button type="submit" className="w-full">
+          신청하기
+        </Button>
+      </form>
+
+      {showAlert && (
+        <div className="fixed inset-0 flex items-center justify-center z-12 mx-10">
+          <Alert className="bg-black text-white">
+            <AlertTitle>🎉신청 완료!</AlertTitle>
+            <AlertDescription>
+              신청해주셔서 감사합니다.😆
+              <br />
+              <b>12시간</b> 이내로 연락드릴게요.
+            </AlertDescription>
+          </Alert>
+        </div>
+      )}
+    </div>
   );
 }
