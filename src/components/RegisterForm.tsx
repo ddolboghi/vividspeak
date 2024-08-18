@@ -2,6 +2,8 @@
 
 import { postRegisterToSupabase } from "@/services/postRegisterToSupabase";
 import { useState } from "react";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 export default function RegisterForm() {
   const [name, setName] = useState<string>("");
@@ -39,19 +41,21 @@ export default function RegisterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <input
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col items-center justify-center min-h-screen p-4 gap-2"
+    >
+      <section className="flex flex-col w-full max-w-md space-y-4">
+        <Input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="이름"
           required
+          className=""
         />
-      </div>
-      <div>
-        <input
+        <Input
           id="phoneNumber"
           type="tel"
           value={phoneNumber}
@@ -60,8 +64,8 @@ export default function RegisterForm() {
           maxLength={13}
           required
         />
-      </div>
-      <button type="submit">신청하기</button>
+      </section>
+      <Button type="submit">신청하기</Button>
     </form>
   );
 }
