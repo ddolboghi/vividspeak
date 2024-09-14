@@ -5,6 +5,7 @@ import p3 from "@/public/p3.jpg";
 import p4 from "@/public/p4.jpg";
 import p5 from "@/public/p5.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function TodayList({
   params,
@@ -36,6 +37,7 @@ export default async function TodayList({
       <ShareBtn
         shareUrl={`https://www.vividspeak.site/ilovetest/${params.result}`}
       />
+      <Link href="/ilovetest">테스트하러 가기</Link>
     </main>
   );
 }
