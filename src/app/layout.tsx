@@ -14,7 +14,6 @@ const pretendard = localFont({
 
 export const metadata: Metadata = {
   title: "VIVID SPEAK",
-  description: "1대1 영어회화 과외",
   icons: {
     icon: "/vividone.svg",
   },
