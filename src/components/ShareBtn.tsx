@@ -8,8 +8,8 @@ export default function ShareBtn({ shareUrl }: ShareBtnProps) {
   const shareContent = async () => {
     try {
       const shareData = {
-        title: "피부 성격 테스트",
-        text: "내 피부는 어떤 성격일까요? 지금 확인해보세요!",
+        title: "피부 캐릭터 테스트",
+        text: "내 피부는 어떤 캐릭터일까요? 지금 확인해보세요!",
         url: shareUrl,
       };
 
