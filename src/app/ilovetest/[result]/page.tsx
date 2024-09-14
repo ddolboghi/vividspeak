@@ -13,21 +13,20 @@ export default async function TodayList({
 }) {
   let image = p1;
 
-  switch (params.result) {
-    case "p2":
-      image = p2;
-      break;
-    case "p3":
-      image = p3;
-      break;
-    case "p4":
-      image = p4;
-      break;
-    case "p5":
-      image = p5;
-      break;
-    default:
-      break;
+  if (Number(params.result) > 0) {
+    image = p1;
+  }
+  if (Number(params.result) > 10) {
+    image = p2;
+  }
+  if (Number(params.result) > 20) {
+    image = p3;
+  }
+  if (Number(params.result) > 30) {
+    image = p4;
+  }
+  if (Number(params.result) > 40) {
+    image = p5;
   }
 
   return (
